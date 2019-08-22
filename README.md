@@ -1,8 +1,9 @@
-# react-use-is-scrolled-into-view
+# zach-local-storage-safe
 
-> React hook which Check virturel dom enters the user's view.
+> power up window localStorage, with obj, array, string support, initialize data type, expire time.
 
-[![NPM](https://img.shields.io/npm/v/react-use-is-scrolled-into-view.svg)](https://www.npmjs.com/package/react-use-is-scrolled-into-view) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/zach-local-storage-safesvg)](https://www.npmjs.com/package/react-use-is-scrolled-into-view) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Table of Contents
 
@@ -19,10 +20,10 @@
 
 ```bash
 # Yarn
-yarn add react-use-is-scrolled-into-view
+yarn add zach-local-storage-safe
 
 # NPM
-npm install --save react-use-is-scrolled-into-view
+npm install --save zach-local-storage-safe
 ```
 
 ## Quick Start
@@ -31,22 +32,25 @@ npm install --save react-use-is-scrolled-into-view
 //
 // Individual components
 //
-import {useRef} from 'react';
-import useIsScrolledIntoView from 'react-use-is-scrolled-into-view';
+import {useState,useCallback} from 'react';
+import locaslStorageSafe from 'zach-local-storage-safe';
 const Example = () => {
-    const ref = useRef(null);
-    const isIntoView = useIsScrolledIntoView(ref);
+    const [state,setState] = useState(locaslStorageSafe.getItem('myState','object') );
+    const _onClick = useCallback((e)=>{
+            const id = e.target.getAttribute('data-id');
+             const data = {id};
+             locaslStorageSafe.setItem('myState',data,30000);
+            setState(()=>data)
+    },[])
     return (
-        <div ref={ref}  data-inview={isIntoView}>
-         
+        <div onClick={_onClick}  data-id={state.id}>
+            Test
         </div>
     );
 };
 ```
 
 ## Usage
-
-NOTE: React hooks require `react` and `react-dom` version `16.8.0` or higher.
 
 ## Related projects
 
