@@ -1,6 +1,6 @@
 {
     "name": "zach-local-storage-safe",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "power up window localStorage, with obj, array, string support, initialize data type, expire time",
     "repository": {
         "type": "git",
