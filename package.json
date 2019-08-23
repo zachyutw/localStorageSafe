@@ -11,7 +11,7 @@
         "prettier": "prettier --config .prettierrc --write \"{src,example}/**/*.{js,ts,tsx}\"",
         "build": "rollup -c",
         "prepare": "yarn run prettier && yarn run build",
-        "delpoy": "yarn prepare && npm publish"
+        "deploy": "yarn prepare && npm publish"
     },
     "keywords": [ "javascript", "localStorage", "client side" ],
     "author": {
