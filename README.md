@@ -1,8 +1,8 @@
 # zach-local-storage-safe
 
-> power up window localStorage, with obj, array, string support, initialize data type, expire time.
+> Power up browser localStorage function, with extra obj, array, string support, initialize data type, expire time.
 
-[![NPM](https://img.shields.io/npm/v/zach-local-storage-safesvg)](https://www.npmjs.com/package/react-use-is-scrolled-into-view) 
+[![NPM](https://img.shields.io/npm/v/zach-local-storage-safe.svg)](https://www.npmjs.com/package/react-use-is-scrolled-into-view) 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Table of Contents
@@ -10,7 +10,6 @@
 - [Install](#install)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
-  - [`Individual components`](#inview)
 - [FAQ](#faq)
 - [Thanks](#thanks)
 - [Contributing](#contributing)
@@ -29,9 +28,7 @@ npm install --save zach-local-storage-safe
 ## Quick Start
 
 ```jsx
-//
-// Individual components
-//
+// state initilize with localStorage
 import {useState,useCallback} from 'react';
 import locaslStorageSafe from 'zach-local-storage-safe';
 const Example = () => {
@@ -51,6 +48,9 @@ const Example = () => {
 ```
 
 ## Usage
+
+  [`List`](https://caniuse.com/#search=localStorage) browsers supported 
+
 
 ## Related projects
 
