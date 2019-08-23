@@ -1,6 +1,6 @@
 {
     "name": "zach-local-storage-safe",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "power up window localStorage, with obj, array, string support, initialize data type, expire time",
     "repository": {
         "type": "git",
@@ -10,7 +10,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "prettier": "prettier --config .prettierrc --write \"{src,example}/**/*.{js,ts,tsx}\"",
         "build": "rollup -c",
-        "prepare": "yarn run prettier && yarn run build"
+        "prepare": "yarn run prettier && yarn run build",
+        "delpoy": "yarn prepare && npm publish"
     },
     "keywords": [ "javascript", "localStorage", "client side" ],
     "author": {
